@@ -1,7 +1,5 @@
 
-document.getElementById("fel").addEventListener("click", feltolt)
-
-function feltolt() {
+document.getElementById("fel").addEventListener("click", function(feltolt) {
     let erreValt = document.getElementById("errevalt").value;
     let osszeg = document.getElementById("quantity").value;
     const url = `https://hexarate.paikama.co/api/rates/HUF/${erreValt}/latest`;
@@ -13,9 +11,10 @@ function feltolt() {
             return response.json()
         })
         .then(json => {
-            const mid = json.mid.value;
-            console.log(mid)
+            const mid = json.data.mid;
+            document.getElementById("grid").innerHTML = osszeg*mid;
         })
         .catch(err => console.log(err));
-}
+    feltolt.preventDefault();
+})
 
