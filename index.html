@@ -8,20 +8,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="container col-sm-3 d-grid gap-3 bg-success-subtle row-gap-3">
-        <div id="doboz"></div>
+<body class="bg-light min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="card shadow-sm border-0 rounded-4 p-4" style="width: 420px;">
         <form>
-            <h3 class="text-center">Valuta váltó</h3>
-            <h5>Összeg(HUF)</h5>
-            <input type="number" id="quantity" name="quantity"><br>
-            <select name="penznemek" id="errevalt"><br>
+            <h3 class="text-center fw-semibold mb-4">Valuta váltó</h3>
+            <h5 class="mb-3">Összeg(HUF)</h5>
+            <input type="number" id="quantity" name="quantity" class="mb-3 form-control"><br>
+            <div class="mb-3">
+            <h5 class="mb-3">Cél valuta</h5>
+            <select name="penznemek" id="errevalt" class="form-select"><br>
                 <option value="EUR">EUR</option>
                 <option value="GBP">GBP</option>
                 <option value="USD">USD</option>
               </select><br>
-            <button id="fel">Átváltás</button>
+            <button id="fel" class="btn btn-primary w-100 mb-3">Átváltás</button>
             <h4 id="grid" class="text-center"></h4>
+            </div>
         </form>
     </div>
 
